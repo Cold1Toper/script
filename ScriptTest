@@ -56,4 +56,3 @@ local Window = Library.CreateLib("ColdScript", "DarkTheme")
 
         Fly(true)
     end)
-end
