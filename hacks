@@ -1,0 +1,73 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ColdMenu", "DarkTheme")
+
+-- MAIN
+
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("Menus")
+
+MainSection:NewButton("Infinite Yield", "This is a ADM PANEL", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+MainSection:NewButton("Mukuro Hub (BLOX FRUITS)", "Blox fruit is a virus", function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+end)
+MainSection:NewButton("Milk Up (PSX)", "Psx Fall", function()
+    loadstring(game:HttpGet("https://pastebin.com/kNpVNKUy"))()
+end)
+MainSection:NewButton("ESP and AIMBOT", "Other Gui;)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"))()
+end)
+
+MainSection:NewLabel("MORE SOON")
+
+--CHARACTER
+
+local CHTab = Window:NewTab("Character")
+local CHSection = CHTab:NewSection("Character")
+
+CHSection:NewToggle("Super Human", "I'm a God?", function(state)
+    if state then
+        game.Player.LocalPlayer.Character.Humanoid.WalkSpeed = 80
+        game.Player.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Player.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Player.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+CHSection:NewSlider("WalkSpeed", "0 + 0", 128, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+CHSection:NewSlider("JumpPower", "2 + 4", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+CHSection:NewButton("Noclip (may see errors)", "'F' to active and 'F' desactive", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/hfDGWCTH", true))()
+end)
+CHSection:NewButton("Fly", "nothing", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/KtLKcbxr", true))()
+end)
+
+CHSection:NewLabel("Utilities")
+
+CHSection:NewButton("CTRL + CLICK = TP", "TP!!", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/PhqLjbV9", true))()
+end)
+
+CHSection:NewButton("INF JUMP", "SPAM SPACEBAR", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/pDy1Ru0J", true))()
+end)
+
+
+-- Others
+
+local OTab = Window:NewTab("Others")
+local OSection = OTab:NewSection("Other")
+
+OSection:NewButton("Auto Clicker", "Any game", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/iDRxgD1T"))()
+end)
+-- SETTING
+
+local STab = Window:NewTab("Settings")
+local SSection = STab:NewSection("Main UI")
